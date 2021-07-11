@@ -1,0 +1,43 @@
+{
+  "name": "ano-it-com/eav-semantics-bundle",
+  "version": "0.1.0",
+  "description": "Semantics for EAV Bundle",
+  "type": "symfony-bundle",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "AUTONOMOUS NONPROFIT ORGANIZATION \"RESEARCH CENTER\" INFORMATION TECHNOLOGIES",
+      "homepage": "https://github.com/ano-it-com/"
+    }
+  ],
+  "require": {
+    "php": "^7.4",
+    "ano-it-com/eav-bundle": "^0.1.0",
+    "semsol/arc2": "^2"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^9.4"
+  },
+  "config": {
+    "sort-packages": true
+  },
+  "autoload": {
+    "psr-4": {
+      "ANOITCOM\\EAVSemanticsBundle\\": "src"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "ANOITCOM\\EAVSemanticsBundle\\Tests\\": "tests"
+    }
+  },
+  "scripts": {
+    "test": "./vendor/bin/simple-phpunit"
+  },
+  "extra": {
+    "symfony": {
+      "allow-contrib": false,
+      "require": "^5.2"
+    }
+  }
+}

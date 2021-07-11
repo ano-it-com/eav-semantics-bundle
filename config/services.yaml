@@ -1,0 +1,18 @@
+parameters:
+
+services:
+
+  _defaults:
+    autowire: true
+    autoconfigure: true
+
+  ANOITCOM\EAVSemanticsBundle\:
+    resource: '../src/*'
+
+  _instanceof:
+    ANOITCOM\EAVSemanticsBundle\Semantics\Provider\Strategy\SemanticProviderStrategyInterface:
+      tags: [ 'ANOITCOM.provider.semantic.strategy' ]
+
+  ANOITCOM\EAVSemanticsBundle\Semantics\Provider\Strategy\SemanticProviderStrategyCollection:
+    arguments:
+      $strategyCollection: !tagged_iterator ANOITCOM.provider.semantic.strategy
